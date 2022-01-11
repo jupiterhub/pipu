@@ -1,0 +1,28 @@
+{
+  "root": "apps/pipu-e2e",
+  "sourceRoot": "apps/pipu-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/pipu-e2e/cypress.json",
+        "devServerTarget": "pipu:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "pipu:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/pipu-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["pipu"]
+}

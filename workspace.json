@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "pipu": "apps/pipu",
+    "pipu-e2e": "apps/pipu-e2e"
+  }
+}
